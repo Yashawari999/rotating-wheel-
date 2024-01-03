@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+
+      .ring-container {
+        width: 400px;
+        height: 400px;
+        border-radius: 50%;
+        background: conic-gradient(
+          #ff0000 0% 25%,
+          /* Red */ #00ff00 25% 50%,
+          /* Green */ #0000ff 50% 75%,
+          /* Blue */ #ffff00 75% 100% /* Yellow */
+        );
+        display: flex !important;
+        place-items: center !important;
+        justify-content: center;
+      }
+      .ring-container:hover {
+        animation: mymove 2s infinite;
+      }
+
+      @keyframes mymove {
+        50% {
+          transform: rotate(360deg);
+        }
+      }
+
+      .inner-circle {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        background: rgb(255, 255, 255);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="ring-container">
+      <div class="inner-circle"></div>
+    </div>
+  </body>
+</html>
